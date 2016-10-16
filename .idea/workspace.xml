@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af455ff-1fb9-4f35-9466-262de314f87f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/keepportlandreal/css/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/keepportlandreal/js/default.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/400.shtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/401.shtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/403.shtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/404.shtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/500.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/500.shtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/keepportlandreal/favicon.ico" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keepportlandreal/default.html" afterPath="$PROJECT_DIR$/keepportlandreal/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keepportlandreal/css/site.css" afterPath="$PROJECT_DIR$/keepportlandreal/css/site.css" />
     </list>
     <ignored path="bluehost.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keepportlandreal/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+            <state relative-caret-position="102">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keepportlandreal/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -66,6 +67,7 @@
         <option value="$PROJECT_DIR$/default.html" />
         <option value="$PROJECT_DIR$/keepportlandreal/default.html" />
         <option value="$PROJECT_DIR$/keepportlandreal/js/default.js" />
+        <option value="$PROJECT_DIR$/keepportlandreal/css/site.css" />
       </list>
     </option>
   </component>
@@ -269,7 +271,7 @@
       <workItem from="1474317579650" duration="2586000" />
       <workItem from="1476275342713" duration="319000" />
       <workItem from="1476371200722" duration="79000" />
-      <workItem from="1476621326650" duration="2912000" />
+      <workItem from="1476621326650" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="Just a quick update to test webstorm use.">
       <created>1474317687393</created>
@@ -292,17 +294,24 @@
       <option name="project" value="LOCAL" />
       <updated>1476621645039</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update to include first cut js and css files">
+      <created>1476624685700</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1476624685700</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5896000" />
+    <option name="totallyTimeSpent" value="6193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="869" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15546875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.459375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -357,7 +366,8 @@
     <MESSAGE value="Just a quick update to test webstorm use." />
     <MESSAGE value="Remove &quot;pi&quot; website&#10;" />
     <MESSAGE value="Update existing default page for site. Temporary placeholder." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update existing default page for site. Temporary placeholder." />
+    <MESSAGE value="Update to include first cut js and css files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to include first cut js and css files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -386,14 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keepportlandreal/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -404,8 +406,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/keepportlandreal/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keepportlandreal/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
