@@ -1,3 +1,3 @@
 (function () {
-    alert ("code is running");
+  alert("code is running");
 })();
