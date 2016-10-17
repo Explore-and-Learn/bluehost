@@ -1,5 +1,10 @@
 body {
   font-family: sans-serif;
   font-size: 14px;
-  color: blue;
+  color: #222;
+}
+.menu{
+  float: right;
+  font-size: 12px;
+  color: #888;
 }
