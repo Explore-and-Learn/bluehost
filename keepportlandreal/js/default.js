@@ -3,16 +3,18 @@
 	"use strict"
 
 	/**
-	 * Open's CNN web site
+	 * Opens CNN web site
+	 * @param {boolean} openSite
 	 */
-	function openCnn() {
-		open("http://cnn.com");
+	function openCnn(openSite) {
+		if(openSite)
+			open("http://cnn.com");
 	}
 
 	$(document).ready(function(){
 
 			$("#mainMenu").on("click", function(){
-				openCnn();
+				openCnn(true);
 			})
 
 	})
