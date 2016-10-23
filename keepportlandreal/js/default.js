@@ -15,8 +15,8 @@
 
 			$("#mainMenu").on("click", function(){
 				openCnn(true);
-			})
+			});
 
-	})
+	});
 
 })();
