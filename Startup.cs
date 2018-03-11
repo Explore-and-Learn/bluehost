@@ -35,7 +35,6 @@ namespace martyhope.com
                 EnableDefaultFiles = true
             };
             options.StaticFileOptions.ServeUnknownFileTypes = true;
-            options.DefaultFilesOptions.DefaultFileNames = new[] { "default.html" };
 
             app.UseFileServer(options)
                 .UseDefaultFiles()
