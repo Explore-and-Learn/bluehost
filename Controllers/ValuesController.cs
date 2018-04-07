@@ -13,7 +13,7 @@ namespace martyhope.com.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value_one", "value_two" };
         }
 
         // GET api/values/5
