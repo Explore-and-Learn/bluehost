@@ -5,39 +5,56 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using RainGauge;
 
 namespace martyhope.com.Controllers
 {
-    [Route("api/pdxrainfall")]
+    /// <summary>
+    /// Retrieves data from City of Portland HYDRA Rainfall Network web site
+    /// </summary>
+    [Route("api/pdxweatherstationdata")]
     public class PdxRainController : Controller
     {
         /// <summary>
         /// Return all of the reporting stations data ordered by the water accumulation result
         /// </summary>
-        /// <returns cref="IEnumerable&lt;PDXRainGauge.PrecipitationData&gt;"/>
+        /// <returns cref="PDXRainGauge.PrecipitationData"/>
         [HttpGet]
-        public async Task<IEnumerable<PDXRainGauge.PrecipitationData>> GetAllOrderedByWaterYearAccumulationAmount()
+        public async Task<IActionResult> GetAllOrderedByWaterYearAccumulationAmount()
         {
-            return await Task<IEnumerable<PDXRainGauge.PrecipitationData>>.Factory.StartNew(
+            var result = await Task<IEnumerable<PDXRainGauge.PrecipitationData>>.Factory.StartNew(
                 () =>
                 {
-                    IEnumerable<PDXRainGauge.PrecipitationData> pdxRainData = RainGauge.PDXRainGauge.pdxRainfallRecords.Value;
-                    return pdxRainData.OrderByDescending(x => x.WaterYearAccumulation);
+                    try
+                    {
+                        IEnumerable<PDXRainGauge.PrecipitationData> pdxRainData = RainGauge.PDXRainGauge.pdxRainfallRecords.Value;
+                        return pdxRainData.OrderByDescending(x => x.WaterYearAccumulation);
+                    }
+                    catch
+                    {
+                        return null;
+                    }
+
                 }, CancellationToken.None);
+            return result == null ? (IActionResult)NotFound() : Ok(result);
 
         }
-
         /// <summary>
-        /// Return the requested number of reporting stations data ordered by the water accumulation result
+        /// Take a stationid query string parameter and returns the data for just that station
         /// </summary>
-        /// <returns cref="IEnumerable&lt;PDXRainGauge.PrecipitationData&gt;"/>
-        [HttpGet("{i}")]
-        public IEnumerable<PDXRainGauge.PrecipitationData> Get(int i)
-        {
-            IEnumerable<PDXRainGauge.PrecipitationData> pdxRainData = RainGauge.PDXRainGauge.pdxRainfallRecords.Value;
-            return pdxRainData.OrderByDescending(x => x.WaterYearAccumulation).Take(i);
+        /// <param name="stationNumber">station number</param>
+        ///  <returns cref="PDXRainGauge.PrecipitationData"/>
 
+        [HttpGet("{stationNumber}")]
+        public async Task<IActionResult> GetStationData(int stationNumber)
+        {
+            var result  = await Task<PDXRainGauge.PrecipitationData>.Factory.StartNew(
+                () =>
+                {
+                    return RainGauge.PDXRainGauge.pdxRainfallRecords.Value.FirstOrDefault(x => x.StationNumber == stationNumber);
+                }, CancellationToken.None);
+            return result == null ? (IActionResult)NotFound() : Ok(result);
         }
     }
 }
