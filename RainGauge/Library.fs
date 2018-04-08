@@ -32,6 +32,7 @@ module PDXRainGauge =
               |> Array.filter (fun row -> not (row.``City of Portland Rain Gages - Station Name - Station Name``.ToLower().Contains("region")))
               |> Array.filter (fun row -> not (row.``City of Portland Rain Gages - Accumulation (inches) - 1-day``.ToLower().Contains("retired")))
               |> Array.filter (fun row -> not (row.``City of Portland Rain Gages - Station Name - Station Name``.ToLower().Contains("other")))
+              |> Array.filter (fun row -> not (row.``City of Portland Rain Gages - Accumulation (inches) - Water Year``.Contains("0.0")))
 
 
          Some(seq {

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RainGauge;
 
 namespace martyhope.com.Controllers
 {
     [Route("api/pdxrainfall")]
     public class PdxRainController : Controller
     {
-        // GET api/values
         [HttpGet]
-        public IEnumerable<RainGauge.PDXRainGauge.PrecipitationData> Get()
+        public IEnumerable<PDXRainGauge.PrecipitationData> Get()
         {
-            return RainGauge.PDXRainGauge.pdxRainfallRecords.Value;
+            return PDXRainGauge.pdxRainfallRecords.Value.OrderByDescending(x => x.WaterYearAccumulation);
 
         }
     }
