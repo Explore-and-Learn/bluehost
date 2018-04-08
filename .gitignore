@@ -2,4 +2,7 @@
 .idea/**/*
 /bin
 /obj
+**/bin/**/*
+**/obj/**/*
+**/*.cache
 .vs/**/*
