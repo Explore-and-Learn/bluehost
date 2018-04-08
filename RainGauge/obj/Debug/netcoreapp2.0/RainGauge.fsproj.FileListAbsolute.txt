@@ -1,6 +1,0 @@
-C:\src\bluehost\RainGauge\bin\Debug\netcoreapp2.0\RainGauge.deps.json
-C:\src\bluehost\RainGauge\bin\Debug\netcoreapp2.0\RainGauge.dll
-C:\src\bluehost\RainGauge\obj\Debug\netcoreapp2.0\RainGauge.fsprojResolveAssemblyReference.cache
-C:\src\bluehost\RainGauge\bin\Debug\netcoreapp2.0\RainGauge.pdb
-C:\src\bluehost\RainGauge\obj\Debug\netcoreapp2.0\RainGauge.dll
-C:\src\bluehost\RainGauge\obj\Debug\netcoreapp2.0\RainGauge.pdb
