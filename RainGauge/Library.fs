@@ -13,7 +13,7 @@ module PDXRainGauge =
         _5DayAccumulation: float
         CurrentMonthAccumulation: float
         WaterYearAccumulation: float
-        TimeOfLastReading: string
+        TimeOfLastReading: System.DateTime
         }
         
 
@@ -45,7 +45,7 @@ module PDXRainGauge =
                     _5DayAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - 5-day``
                     CurrentMonthAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - Apr``
                     WaterYearAccumulation =  float row.``City of Portland Rain Gages - Accumulation (inches) - Water Year``
-                    TimeOfLastReading = row.``City of Portland Rain Gages - Time of Latest Reading - Time of Latest Reading``
+                    TimeOfLastReading = System.DateTime.Parse row.``City of Portland Rain Gages - Time of Latest Reading - Time of Latest Reading``
                 }
             })
         with 
