@@ -13,7 +13,7 @@ namespace martyhope.com.Controllers
     /// <summary>
     /// Retrieves data from City of Portland HYDRA Rainfall Network web site
     /// </summary>
-    [Route("api/pdxweatherstationdata")]
+    [Route("api/raintotals")]
     public class PdxRainController : Controller
     {
         /// <summary>
