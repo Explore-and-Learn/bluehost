@@ -11,7 +11,6 @@ module PDXRainGauge =
         _1DayAccumulation: float
         _3DayAccumulation: float
         _5DayAccumulation: float
-        CurrentMonthAccumulation: float
         WaterYearAccumulation: float
         TimeOfLastReading: System.DateTime
         }
@@ -43,7 +42,6 @@ module PDXRainGauge =
                     _1DayAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - 1-day``
                     _3DayAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - 3-day``
                     _5DayAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - 5-day``
-                    CurrentMonthAccumulation = float row.``City of Portland Rain Gages - Accumulation (inches) - May``
                     WaterYearAccumulation =  float row.``City of Portland Rain Gages - Accumulation (inches) - Water Year``
                     TimeOfLastReading = System.DateTime.Parse row.``City of Portland Rain Gages - Time of Latest Reading - Time of Latest Reading``
                 }
@@ -57,5 +55,5 @@ module PDXRainGauge =
     
     if Option.isSome pdxRainfallRecords then
         pdxRainfallRecords.Value
-        |> Seq.iter (fun row -> printfn "Station: %s \r   Number: %i \r      MTD Rainfall: %f" row.StationName row.StationNumber row.CurrentMonthAccumulation)
+        |> Seq.iter (fun row -> printfn "Station: %s \r   Number: %i \r      Water YTD Rainfall: %f" row.StationName row.StationNumber row.WaterYearAccumulation)
    
