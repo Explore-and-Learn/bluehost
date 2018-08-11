@@ -54,7 +54,7 @@ namespace martyhope.com.Controllers
                 {
                     return RainGauge.PDXRainGauge.pdxRainfallRecords.Value.FirstOrDefault(x => x.StationNumber == stationNumber);
                 }, CancellationToken.None);
-            return result == null ? (IActionResult)NotFound() : Ok(result);
+            return result == null ? (IActionResult)NotFound($"Station number {stationNumber} does not exist.") : Ok(result);
         }
     }
 }

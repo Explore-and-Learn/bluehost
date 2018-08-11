@@ -31,16 +31,10 @@ namespace martyhope.com
                 app.UseDeveloperExceptionPage();
             }
 
-            var options = new FileServerOptions
-            {
-                EnableDefaultFiles = true
-            };
-            options.StaticFileOptions.ServeUnknownFileTypes = true;
-
-            app.UseFileServer(options)
-                .UseDefaultFiles()
+            app.UseFileServer(new FileServerOptions())
                 .UseStaticFiles(new StaticFileOptions
                     {
+                        ServeUnknownFileTypes = true,
                         OnPrepareResponse = ctx =>
                         {
                             // Requires the following import:
