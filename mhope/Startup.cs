@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using Swashbuckle.AspNetCore.Swagger;
 namespace martyhope.com
 {
     public class Startup
@@ -20,6 +20,10 @@ namespace martyhope.com
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Marty's Very Awesome but Random API", Version = "v1" });
+            });
             services.AddScoped<IPrimeNumberService, PrimeNumberService>();
         }
 
@@ -31,6 +35,11 @@ namespace martyhope.com
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseFileServer(new FileServerOptions())
                 .UseStaticFiles(new StaticFileOptions
                     {
