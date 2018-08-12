@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AirQuality.Domain.Standard\AirQuality.Domain.Standard.csproj" />
     <ProjectReference Include="..\mhope\martyhope.com.csproj" />
     <ProjectReference Include="..\RainGauge\RainGauge.fsproj" />
   </ItemGroup>
