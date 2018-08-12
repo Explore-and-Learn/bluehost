@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 using RainGauge;
 
 namespace martyhope.com.Controllers
@@ -28,8 +25,8 @@ namespace martyhope.com.Controllers
                 {
                     try
                     {
-                        IEnumerable<PDXRainGauge.PrecipitationData> pdxRainData = RainGauge.PDXRainGauge.pdxRainfallRecords.Value;
-                        return pdxRainData.OrderByDescending(x => x.WaterYearAccumulation);
+                        IEnumerable<PDXRainGauge.PrecipitationData> pdxRainData = PDXRainGauge.pdxRainfallRecords.Value;
+                        return pdxRainData.OrderBy(x => x.StationNumber);
                     }
                     catch
                     {
@@ -52,7 +49,7 @@ namespace martyhope.com.Controllers
             var result  = await Task<PDXRainGauge.PrecipitationData>.Factory.StartNew(
                 () =>
                 {
-                    return RainGauge.PDXRainGauge.pdxRainfallRecords.Value.FirstOrDefault(x => x.StationNumber == stationNumber);
+                    return PDXRainGauge.pdxRainfallRecords.Value.FirstOrDefault(x => x.StationNumber == stationNumber);
                 }, CancellationToken.None);
             return result == null ? (IActionResult)NotFound($"Station number {stationNumber} does not exist.") : Ok(result);
         }
